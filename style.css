@@ -5,13 +5,13 @@ body {
   color: #1f2937;
 }
 
-.page-wrapper {
+.container {
   max-width: 1150px;
   margin: auto;
   padding: 25px;
 }
 
-.hero {
+header {
   background: #0b3d91;
   color: white;
   padding: 30px;
@@ -19,11 +19,11 @@ body {
   margin-bottom: 25px;
 }
 
-.hero h1 {
+header h1 {
   margin: 0 0 10px;
 }
 
-.form-card {
+form {
   background: white;
   padding: 30px;
   border-radius: 16px;
@@ -64,9 +64,27 @@ textarea {
 
 .ai-box {
   background: #eaf4ff;
-  padding: 20px;
+  padding: 22px;
   border-radius: 12px;
   border: 1px solid #b8d9ff;
+}
+
+#recommendationText {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.recommend-card {
+  background: white;
+  border-left: 5px solid #0b3d91;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.recommend-card h3 {
+  margin-top: 0;
+  color: #0b3d91;
 }
 
 button {
