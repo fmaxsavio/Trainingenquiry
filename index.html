@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TVS Training Enquiry Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="hero">
+      <h1>Detailed Training Enquiry Form</h1>
+      <p>Fields may be marked as <b>In TVS Scope</b> wherever customer input is unavailable.</p>
+    </header>
+
+    <main class="form-card">
+      <form id="trainingForm">
+
+        <section>
+          <h2>1. Customer Details</h2>
+          <div class="grid">
+            <input type="text" name="company" placeholder="Company / Institution Name - In TVS scope">
+            <input type="text" name="contactPerson" placeholder="Contact Person - In TVS scope">
+            <input type="email" name="email" placeholder="Email ID - In TVS scope">
+            <input type="tel" name="mobile" placeholder="Mobile Number - In TVS scope">
+            <input type="text" name="location" placeholder="Location - In TVS scope">
+            <select name="sector">
+              <option>In TVS scope</option>
+              <option>Automotive</option>
+              <option>Manufacturing</option>
+              <option>EV / Power Electronics</option>
+              <option>Embedded Systems</option>
+              <option>Semiconductor</option>
+              <option>Education</option>
+            </select>
+          </div>
+        </section>
+
+        <section>
+          <h2>2. Training Requirement</h2>
+          <div class="grid">
+            <input type="text" name="topic" placeholder="Training Topic - In TVS scope">
+
+            <select id="category" name="category">
+              <option value="In TVS scope">In TVS scope</option>
+              <option value="awareness">Awareness / Orientation</option>
+              <option value="foundation">Foundation</option>
+              <option value="intermediate">Intermediate Hands-on</option>
+              <option value="advanced">Advanced Industrial</option>
+              <option value="project">Project-based</option>
+              <option value="trainer">Train-the-Trainer</option>
+            </select>
+
+            <select id="mode" name="mode">
+              <option value="In TVS scope">In TVS scope</option>
+              <option value="online">Online</option>
+              <option value="offline">Offline</option>
+              <option value="hybrid">Hybrid</option>
+            </select>
+
+            <select id="participantLevel" name="participantLevel">
+              <option value="In TVS scope">In TVS scope</option>
+              <option value="student">Students / Freshers</option>
+              <option value="technician">Technicians</option>
+              <option value="engineer">Engineers</option>
+              <option value="manager">Managers</option>
+              <option value="faculty">Faculty / Trainers</option>
+            </select>
+
+            <input type="number" id="participants" name="participants" placeholder="No. of Participants - In TVS scope">
+            <input type="date" name="startDate">
+          </div>
+
+          <textarea name="objectives" placeholder="Expected Learning Objectives - In TVS scope"></textarea>
+          <textarea name="handsOn" placeholder="Expected Hands-on Activities - In TVS scope"></textarea>
+        </section>
+
+        <section>
+          <h2>3. Technical Scope</h2>
+          <div class="grid">
+            <select id="technology" name="technology">
+              <option value="In TVS scope">In TVS scope</option>
+              <option value="embedded">Embedded Systems / STM32</option>
+              <option value="iot">IoT / Cloud Dashboard</option>
+              <option value="ev">EV / Power Electronics</option>
+              <option value="plc">PLC / Industrial Automation</option>
+              <option value="robotics">Robotics</option>
+              <option value="ai">AI / ML / Data Analytics</option>
+              <option value="safety">Safety / ESD / Standards</option>
+            </select>
+
+            <select id="practical" name="practical">
+              <option value="In TVS scope">In TVS scope</option>
+              <option value="low">Theory-focused</option>
+              <option value="medium">Theory + Demo</option>
+              <option value="high">60% Hands-on</option>
+              <option value="project">Project / Prototype Based</option>
+            </select>
+
+            <select id="assessment" name="assessment">
+              <option value="In TVS scope">In TVS scope</option>
+              <option value="no">No</option>
+              <option value="yes">Pre/Post Assessment</option>
+              <option value="certification">Assessment + Certification</option>
+            </select>
+
+            <select id="output" name="output">
+              <option value="In TVS scope">In TVS scope</option>
+              <option value="knowledge">Knowledge Session</option>
+              <option value="skill">Skill Demonstration</option>
+              <option value="project">Working Project</option>
+              <option value="industry">Industry-ready Competency</option>
+            </select>
+          </div>
+        </section>
+
+        <section>
+          <h2>4. Document Upload</h2>
+          <input type="file" id="documents" name="documents" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.jpg,.png">
+          <ul id="fileList"></ul>
+        </section>
+
+        <section>
+          <h2>5. Commercial / Delivery Inputs</h2>
+          <div class="grid">
+            <input type="text" name="preferredDuration" placeholder="Preferred Duration - In TVS scope">
+            <input type="text" name="budget" placeholder="Budget Range - In TVS scope">
+            <input type="text" name="venue" placeholder="Venue / Lab Availability - In TVS scope">
+            <input type="text" name="deliverables" placeholder="Required Deliverables - In TVS scope">
+          </div>
+        </section>
+
+        <section class="ai-box">
+          <h2>AI Duration Recommendation</h2>
+          <p id="recommendationText">Click the button to get recommended duration.</p>
+          <button type="button" onclick="recommendDuration()">Get AI Recommendation</button>
+        </section>
+
+        <div class="button-row">
+          <button type="submit">Submit Enquiry</button>
+          <button type="button" onclick="downloadJSON()">Download Data</button>
+          <button type="reset">Reset</button>
+        </div>
+
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
